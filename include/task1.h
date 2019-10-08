@@ -40,6 +40,7 @@ void msort(T *arr, int n) {
 	}
 }
 
+template<>
 void msort(char** arr, int n) {
 	if (n == 1)return;
 	char** left = new char*[n / 2];
@@ -58,23 +59,27 @@ void msort(char** arr, int n) {
 	for (int i = 0;i < n;i++) {
 		if (pl == n / 2) {
 			//strcpy(arr[i], right[pr]);
-			swap(arr[i], right[pr]);
+			//swap(arr[i], right[pr]);
+			arr[i] = right[pr];
 			pr++;
 		}
 		else if (pr == (n + 1) / 2) {
 			//strcpy(arr[i], left[pl]);
-			swap(arr[i], left[pl]);
+			//swap(arr[i], left[pl]);
+			arr[i] = left[pl];
 			pl++;
 		}
 		else {
 			if (strlen(left[pl]) < strlen(right[pr])) {
 				//strcpy(arr[i], left[pl]);
-				swap(arr[i], left[pl]);
+				//swap(arr[i], left[pl]);
+				arr[i] = left[pl];
 				pl++;
 			}
 			else {
 				//strcpy(arr[i], right[pr]);
-				swap(arr[i], right[pr]);
+				//swap(arr[i], right[pr]);
+				arr[i] = right[pr];
 				pr++;
 			}
 		}
