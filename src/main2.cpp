@@ -3,7 +3,7 @@
 
 using namespace std;
 
-template<class t>
+template<class T>
 T gen1() {
 	return 1;
 }

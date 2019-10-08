@@ -1,7 +1,10 @@
 #ifndef TASK1_H
 #define TASK1_H
+
 #define _CRT_SECURE_NO_WARNINGS
-#include <bits/stdc++.h>
+#include <cstring>
+#include <algorithm>
+#include <utility>
 
 using namespace std;
 
