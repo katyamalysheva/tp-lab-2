@@ -1,10 +1,9 @@
 #ifndef TASK1_H
 #define TASK1_H
 #define _CRT_SECURE_NO_WARNINGS
-#include <cstring>
-#include <algorithm>
+#include <bits/stdc++.h>
 
-using std::swap;
+using namespace std;
 
 template<class T>
 void msort(T *arr, int n) {
