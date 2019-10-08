@@ -45,13 +45,11 @@ void msort(char** arr, int n) {
 	if (n == 1)return;
 	char** left = new char*[n / 2];
 	for (int i = 0;i < n / 2;i++) {
-		left[i] = new char[strlen(arr[i])+1];
-		strcpy(left[i], arr[i]);
+		left[i]= arr[i];
 	}
 	char** right = new char*[(n + 1) / 2];
 	for (int i = n / 2;i < n;i++) {
-		right[i - n / 2] = new char[strlen(arr[i]) + 1];
-		strcpy(right[i - n / 2], arr[i]);
+		right[i - n / 2] = arr[i];
 	}
 	msort(left, n / 2);
 	msort(right, (n + 1) / 2);
