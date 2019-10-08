@@ -4,7 +4,7 @@
 using namespace std;
 
 template<class t>
-T gen1(T value) {
+T gen1() {
 	return 1;
 }
 
