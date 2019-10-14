@@ -5,7 +5,7 @@
 
 using namespace std;
 
-
+/*
 template<class T>
 T change(T val) {
     return val + 1;
@@ -18,6 +18,7 @@ char *change(char *val) {
         val[i] = val[i] + 1;
     return val;
 }
+ */
 
 int main() {
 
