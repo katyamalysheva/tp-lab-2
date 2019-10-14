@@ -2,10 +2,6 @@
 // Created by Илья Соловьёв on 14/10/2019.
 //
 
-//
-// Created by Илья Соловьёв on 14/10/2019.
-//
-
 #include "task1.h"
 #include <iostream>
 
