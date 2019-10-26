@@ -1,18 +1,15 @@
 ﻿#ifndef task1H
 #define task1H
 
-#include <string>
+#include <cstring>
 
-template<typename T> void msort(T* arr, int n)
+template <typename T> void msort(T* array, int n)
 {
-	mergeSort(arr, 0, n - 1);
+	mergeSort(array, 0, n - 1);
 }
 
 template <typename T> void mergeSort(T* array, int left, int right)
 {
-	if (left >= right)
-		return;
-
 	if (left < right)
 	{
 		int mid = left + (right - left) / 2;

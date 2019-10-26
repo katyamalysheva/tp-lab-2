@@ -1,11 +1,11 @@
 #include "task1.h"
 #include <iostream>
 
-using namespace std;
+using namespace std; 
 
 int main()
 {
-	char* arr1[7]{ (char*)"please", (char*)"give", (char*)"me", (char*)"a", (char*)"rating", (char*)"of", (char*)"ten" };
+	char* arr1[7] = { (char*)"please", (char*)"give", (char*)"me", (char*)"a", (char*)"rating", (char*)"of", (char*)"ten" };
 	msort(arr1, 7);
 
 	for (int i = 0; i < 7; i++)
