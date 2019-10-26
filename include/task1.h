@@ -3,6 +3,14 @@
 
 #include <cstring>
 
+template <typename T> void msort(T* array, int n);
+
+template <typename T> void mergeSort(T* array, int left, int right);
+
+template <typename T> void merge(T* array, int left, int mid, int right);
+
+template <> void merge(char** array, int left, int mid, int right);
+
 template <typename T> void msort(T* array, int n)
 {
 	mergeSort(array, 0, n - 1);
