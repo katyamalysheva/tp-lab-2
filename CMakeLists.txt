@@ -13,6 +13,7 @@ set(CMAKE_CXX_FLAGS "-g -Wall")
 #----------------------------------------------------------------------------
 # Define project sources and includes
 #----------------------------------------------------------------------------
+
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 include_directories(${COMMON_INCLUDES})
 file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
@@ -43,7 +44,7 @@ add_executable(task3 ${SRC_FILES3})
 # Options. Turn on with 'cmake -Dmyvarname=ON'.
 option(BUILD_TESTS "Build all tests." OFF) # Makes boolean 'test' available.
 
-if (BUILD_TESTS)
+if (BUILD_TESTS )
   # This adds another subdirectory, which has 'project(gtest)'.
   add_subdirectory(ext/gtest-1.8.0)
 
