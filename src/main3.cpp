@@ -8,7 +8,7 @@ int main()
 		arr[i] = i;
 	}
 	int (*ch)(int) = change;
-	map<10>(arr, ch);
+	map<int, 10>(arr, ch);
 		for (int i = 0; i < 10; i++)
 	{
 		cout <<arr[i] << ' ';
