@@ -1,48 +1,63 @@
 #pragma once
+#include <string.h>
 //#include <malloc.h>
 template <typename T>
 void merge(T* arr, int n)
 {
-	int mid = n / 2;
-	if (n % 2 == 1)
-		mid++;
-	int h = 1;
-	T* doparr = new T[n * sizeof(T)];
-	int step;
-	while (h < n)
+	for (int i = 1; i< n; i *= 2)
 	{
-		step = h;
-		int i1 = 0;   
-		int i2 = mid; 
-		int j = 0;   
-		while (step <= mid)
+		for (int j = 0; j < n - i; j += 2 * i)
 		{
-			while ((i1 < step) && (i2 < n) && (i2 < (mid + step)))
-			{ 
-				if (arr[i1] < arr[i2])
+			int left = j;
+			int right = (j + 2 * i > n) ? n : j + 2 * i;
+			int mid = j + i;
+			int it1 = 0;
+			int it2 = 0;
+			int* resultarr = new int[right - left];
+			while ((left + it1 < mid) && (mid + it2 < right))
+			{
+				//if (arr[left + it1] < arr[mid + it2])
+				if (MIN_MAX(arr[left + it1], arr[mid + it2]))
 				{
-					doparr[j] = arr[i1];
-					i1++; j++;
+					resultarr[it1 + it2] = arr[left + it1];
+					it1 += 1;
 				}
-				else {
-					doparr[j] = arr[i2];
-					i2++; j++;
+				else
+				{
+					resultarr[it1 + it2] = arr[mid + it2];
+					it2 += 1;
 				}
+
 			}
-			while (i1 < step)
-			{ 
-				doparr[j] = arr[i1];
-				i1++; j++;
+			while (left + it1 < mid)
+			{
+				resultarr[it1 + it2] = arr[left + it1];
+				it1 += 1;
 			}
-			while ((i2 < (mid + step)) && (i2 < n))
-			{ 
-				doparr[j] = arr[i2];
-				i2++; j++;
+			while (mid + it2 < right)
+			{
+				resultarr[it1 + it2] = arr[mid + it2];
+				it2 += 1;
 			}
-			step = step + h; 
+			for (int i = 0; i < it1 + it2; i++)
+				arr[left + i] = resultarr[i];
 		}
-		h = h * 2;
-		for (i1 = 0; i1 < n; i1++)
-			arr[i1] = doparr[i1];
 	}
 }
+
+
+
+template<typename T>
+int MIN_MAX(T a, T b)
+{
+	return a < b;
+}
+template<> int MIN_MAX<char*>(char* a, char* b)
+{
+	return strlen(a) < strlen(b);
+}
+//
+//void merge <char>(char* arr, int n)
+//{
+//	
+//}
