@@ -7,7 +7,7 @@ int main()
 	{
 		arr[i] = i;
 	}
-	int (*ch)(int) = change;
+	int (*ch)(int) = mychange;
 	map<int, 10>(arr, ch);
 		for (int i = 0; i < 10; i++)
 	{

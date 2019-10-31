@@ -7,18 +7,18 @@
 using namespace std;
 
 
-// template <typename T>
-// T gen()
-// {
+template <typename T>
+T mygen()
+{
 
-// 	return (T)(rand() % 201 -100);
-// }
-// template<>
-// char gen()
-// {
-// 	return (char)(rand() % (122 - 65) + 65); //65 -- 122
+	return (T)(rand() % 201 -100);
+}
+template<>
+char mygen()
+{
+	return (char)(rand() % (122 - 65) + 65); //65 -- 122
 	
-// }
+}
 
 template <typename T, size_t N>
 T* createArr(T(*gen)())
