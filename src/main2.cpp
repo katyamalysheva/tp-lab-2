@@ -3,24 +3,21 @@
 int main()
 {
 	cout << "start gen: " << endl;
-	int(*generate)() = gen;
-	int* arrint = createArr(10, generate);
+	int* arr = createArr<int, 10>(gen);
 	for (int i = 0; i < 10; i++)
 	{
-		cout << arrint[i] << ' ';
+		cout << arr[i] << ' ';
 	}
 	cout << endl;
 	cout << "start gen: " << endl;
-	double(*generateD)() = gen;
-	double* arrD = createArr(10, generateD);
+	double* arrD = createArr<double, 10>(gen);
 	for (int i = 0; i < 10; i++)
 	{
 		cout << arrD[i] << ' ';
 	}
 	cout << endl;
 	cout << "start gen: " << endl;
-	char(*generateS)() = gen;
-	char* arrS = createArr(10, generateS);
+	char* arrS = createArr<char, 10>(gen);
 	for (int i = 0; i < 10; i++)
 	{
 		cout << arrS[i] << ' ';

@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 template <typename T>
 T gen()
 {
@@ -19,8 +20,8 @@ char gen()
 	
 }
 
-template <typename T>
-T* createArr(int N, T(*gen)())
+template <typename T, size_t N>
+T* createArr(T(*gen)())
 {
 	srand(time(NULL));
 	T* arr = new T[N];
