@@ -1,8 +1,19 @@
 #pragma once
 #include <string.h>
-//#include <malloc.h>
+
+
+template<typename T>
+int MIN_MAX(T a, T b)
+{
+	return a < b;
+}
+template<> int MIN_MAX<char*>(char* a, char* b)
+{
+	return strlen(a) < strlen(b);
+}
+
 template <typename T>
-void merge(T* arr, int n)
+void msort(T* arr, int n)
 {
 	for (int i = 1; i< n; i *= 2)
 	{
@@ -45,19 +56,3 @@ void merge(T* arr, int n)
 	}
 }
 
-
-
-template<typename T>
-int MIN_MAX(T a, T b)
-{
-	return a < b;
-}
-template<> int MIN_MAX<char*>(char* a, char* b)
-{
-	return strlen(a) < strlen(b);
-}
-//
-//void merge <char>(char* arr, int n)
-//{
-//	
-//}

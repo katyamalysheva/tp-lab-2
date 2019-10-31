@@ -15,7 +15,7 @@ int main()
 		cout << a[i] << " ";
 	}
 	cout << endl;
-	merge(a, 10);
+	msort(a, 10);
 	for (int i = 0; i < 10; i++)
 		cout << a[i] << " ";
 	cout << endl;
