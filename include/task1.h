@@ -24,7 +24,7 @@ void msort(T* arr, int n)
 			int mid = j + i;
 			int it1 = 0;
 			int it2 = 0;
-			int* resultarr = new int[right - left];
+			T* resultarr = new T[right - left];
 			while ((left + it1 < mid) && (mid + it2 < right))
 			{
 				//if (arr[left + it1] < arr[mid + it2])
