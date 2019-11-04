@@ -7,27 +7,23 @@
 
 using namespace std;
 
-template<class T>
+template<typename T>
 T gen() {
-    static int t = 48;
-    return t++;
+    return rand() % 100;
 }
 
-template<>
 char *gen() {
-    static unsigned t = 0;
-    t++;
-    char *s = new char[t + 1];
 
-    for (size_t i = 0; i < t; i++)
-        s[i] = '0' + i;
-    s[t] = '\0';
-
+    char *s = new char[50];
+    for (int i = 0; i < 49; i++) {
+        s[i] = '0' + rand() % 10;
+    }
+    s[50] = 0;
     return s;
 }
 
 int main() {
-    const size_t n = 10;
+    const int n = 4;
     //test Int
     int *arrInt = createArr<int, n>(&gen);
     for (size_t i = 0; i < n; i++) {

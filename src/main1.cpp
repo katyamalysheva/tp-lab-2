@@ -25,7 +25,7 @@ int main() {
     }
     cout << endl;
 
-    char *a[4] = {(char *) "LOOOL", (char *) "LOL", (char *) "LOOOOOOOL", (char *) "LOOOOL"};
+    char *a[4] = {(char *) "LOOOL\0", (char *) "LOL\0", (char *) "LOOOOOOOL\0", (char *) "LOOOOL\0"};
     msort(a, 4);
 
 

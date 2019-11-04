@@ -16,7 +16,7 @@ bool cmp(T x, T y) {
     return x < y;
 }
 
-template<>
+
 bool cmp(char *x, char *y) {
     return strlen(x) < strlen(y);
 }
@@ -59,6 +59,7 @@ void msort(T *Arr, int n) {
     for (long int i = 0; i < n; i++) {
         Arr[i] = ArrRes[i];
     }
+    delete (ArrRes);
 
 }
 
