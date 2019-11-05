@@ -14,6 +14,16 @@ bool compare(T first, T second)
 template <>
 bool compare(char* first, char* second)
 {
+	if (strlen(first) == strlen(second)
+	{
+		int ind = 0;
+		while (ind < strlen(first) && first[i] == second[ind])
+		{
+			ind++;
+		}
+		if (ind == strlen(first) return false;
+		return first[ind] > second[ind];
+	}
 	return strlen(first) > strlen(second);
 }
 
