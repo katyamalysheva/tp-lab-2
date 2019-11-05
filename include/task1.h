@@ -18,7 +18,7 @@ bool compare(char* first, char* second)
 }
 
 template <class T>
-void MergeSort(T* arr, int size)
+void msort(T* arr, int size)
 {
 	if (size <= 1)
 	{
@@ -34,8 +34,8 @@ void MergeSort(T* arr, int size)
 	{
 		right[i - (size / 2)] = arr[i];
 	}
-	MergeSort(left, (size / 2));
-	MergeSort(right, ((size + 1) / 2));
+	msort(left, (size / 2));
+	msort(right, ((size + 1) / 2));
 	int ileft = 0;
 	int iright = 0;
 	for (int i = 0; i < size; i++)

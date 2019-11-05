@@ -16,9 +16,9 @@ int main()
 	c[2][0] = '2';
 	c[3][0] = c[3][1] = c[3][2] = c[3][3] = c[3][4] = c[3][5] = '7';
 	c[4][0] = c[4][1] = c[4][2] = c[4][3] = c[4][4] = '6';
-	MergeSort(d, 5);
-	MergeSort(i, 5);
-	MergeSort(c, 5);
+	msort(d, 5);
+	msort(i, 5);
+	msort(c, 5);
 	for (int j = 0; j < 5; j++)
 	{
 		std::cout << d[j] << ' ';
