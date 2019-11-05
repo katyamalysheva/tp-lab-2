@@ -17,7 +17,7 @@ bool compare(char* first, char* second)
 	if (strlen(first) == strlen(second))
 	{
 		int ind = 0;
-		while (ind < strlen(first) && first[i] == second[ind]))
+		while (ind < strlen(first) && first[ind] == second[ind])
 		{
 			ind++;
 		}
