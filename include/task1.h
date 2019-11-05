@@ -10,11 +10,11 @@ using namespace std;
 
 template<class T>
 bool cmp(T a, T b) {
-	return a <= b;
+	return a < b;
 }
 
 bool cmp(char *a, char *b) {
-	return strlen(a) <= strlen(b);
+	return strlen(a) < strlen(b);
 }
 
 template<class T>
