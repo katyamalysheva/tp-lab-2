@@ -16,7 +16,7 @@ bool cmp(T x, T y) {
     return x < y;
 }
 
-
+template<>
 bool cmp(char *x, char *y) {
     return strlen(x) < strlen(y);
 }
