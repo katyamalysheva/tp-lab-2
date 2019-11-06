@@ -15,4 +15,5 @@ int main() {
 	map<double, n>(arr, change1);
 	for (int i = 0;i < n;i++)cout << arr[i] << " ";
 	cout << '\n';
+	return 0;
 }

@@ -8,4 +8,5 @@ int main() {
 	char* val[n]{ (char*)"ffff", (char*)"fff2", (char*)"f", (char*)"ff", (char*)"vvv", (char*)"fffrr" };
 	msort(val, n);
 	for (int i = 0;i < n;i++)cout << val[i] << '\n';
+	return 0;
 }
