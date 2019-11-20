@@ -12,7 +12,7 @@ T gen()
 int main() {
 	int* arr;
 	const int n = 5;
-	arr = createArr<int, n>(&gen);
+	arr = createArr<int, n>(gen);
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << endl;
